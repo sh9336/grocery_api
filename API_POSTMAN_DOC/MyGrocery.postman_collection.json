@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "8db8c3d5-4e4b-4403-b3af-6130a9cc3169",
+		"name": "MyGrocery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29423927"
+	},
+	"item": [
+		{
+			"name": "Banner",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/banners?populate=image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"banners"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Popular Category",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Popular-Products",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/popular-products?populate=product,product.image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"popular-products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "product,product.image"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get_product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products?populate=image,tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image,tags"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/products?populate=image,tags&filters[name][$contains]=Ap",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image,tags"
+								},
+								{
+									"key": "filters[name][$contains]",
+									"value": "Ap"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "registerr",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "profileCreateMe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "profileGetMe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
